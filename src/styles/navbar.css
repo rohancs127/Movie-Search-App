@@ -1,7 +1,20 @@
-.navbar-div{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+.navbar-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+#navbar-logo {
+  font-family: Pacifico;
+}
+
+#searchbar-div {
+  display: flex;
 }
