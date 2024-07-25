@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
+body{
+  margin: 0;
+}
+
 .navbar-div {
-  position: absolute;
+  /* position: absolute;
   top: 0;
   left: 0;
-  right: 0;
+  right: 0; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,6 +51,7 @@
 
 #search-input::placeholder{
   color: black;
+  font-size: 15px;
 }
 
 #search-input:focus{
