@@ -4,7 +4,15 @@ import MovieCard from "./MovieCard";
 
 function Body() {
   return (
-    <div>
+    <div className="page-body">
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
+      <MovieCard />
       <MovieCard />
     </div>
   );
