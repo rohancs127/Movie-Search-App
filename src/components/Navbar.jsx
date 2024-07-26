@@ -9,7 +9,7 @@ function Navbar() {
       <div id="searchbar-div">
         <div id="search-button-div">
           <button id="search-button">
-            <Search />
+            <Search color="#724330" />
           </button>
         </div>
         <div id="input-div">

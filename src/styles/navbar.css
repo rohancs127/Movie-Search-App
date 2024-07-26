@@ -2,6 +2,7 @@
 
 body{
   margin: 0;
+  background-color: #ffc478;
 }
 
 .navbar-div {
@@ -15,8 +16,9 @@ body{
   padding: 15px;
   padding-left: 100px;
   padding-right: 200px;
-  box-shadow: inset 0px 0px 8px rgb(119, 119, 119);
-  background-color: orange;
+  box-shadow: inset 0px 0px 6px #724330e4;
+  background-color: #ffedc6;
+  color: #724330;
 }
 
 #navbar-logo {
@@ -41,20 +43,22 @@ body{
 
 #search-input {
   border: none;
-  border-bottom: 1px solid rgb(0, 0, 0);
+  border-bottom: 1px solid #724330;
   padding: 8px;
   padding-left: 1px;
   margin-bottom: 8px;
   transition: 0.3s;
-  background-color: orange;
+  background-color: #ffedc6;
+  color: #724330;
 }
 
 #search-input::placeholder{
-  color: black;
+  color: #72433096;
   font-size: 15px;
+  padding: 20px;
 }
 
 #search-input:focus{
   outline: none;
-  box-shadow: 0 4px 2px -2px rgba(173, 173, 173, 0.671)
+  box-shadow: 0 4px 2px -2px rgba(255, 255, 255, 0.44)
 }
