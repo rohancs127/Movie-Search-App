@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 .movie-card-div{
     width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #fff87d;
+    background-color: #b14b4b;
     border-radius: 10px;
-    box-shadow: 0px 0px 5px #72433090;
-    font-family:Arial, Helvetica, sans-serif;
-    color: #724330;
+    box-shadow: 0px 0px 5px #36162e;
+    font-family: Rubik;
+    color: #fff;
     transition: 0.3s;
 }
 
@@ -21,3 +23,6 @@
     border-radius: 10px;
 }
 
+#movie-title{
+    font-weight:500;
+}
