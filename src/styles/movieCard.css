@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 .movie-card-div {
-  width: 200px;
+  width: 185px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +28,7 @@
 
 #movie-image {
   height: 290px;
-  width: 235px;
+  width: 220px;
   border-radius: 10px;
 }
 
