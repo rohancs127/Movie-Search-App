@@ -6,14 +6,6 @@ function Body() {
   return (
     <div className="page-body">
       <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
-      <MovieCard />
     </div>
   );
 }
