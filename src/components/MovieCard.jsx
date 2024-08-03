@@ -1,49 +1,13 @@
 import React from "react";
 import "../styles/movieCard.css";
-import { useState, useEffect } from "react";
-import { API_LINK } from "../scripts/apiLinks";
 
-const url = API_LINK;
-
-function MovieCard() {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    // fetch(url)
-    //   .then((response) => {
-    //     if (response.ok) return response.json();
-    //     else throw new Error("Error in fetching data..");
-    //   })
-    //   .then((result) => {
-    //     let newData = result.results;
-    //     setData(newData)
-    //     // console.log(data);
-    //   });
-
-    const fetchData = async () => {
-      try {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error("Error in fetching data");
-        const result = await response.json();
-        setData(result.results);
-      } catch (error) {
-        console.error(error.message);
-      }
-    };
-
-    fetchData();
-  }, []);
-
+function MovieCard({ movieId, movieImg, movieTitle }) {
   return (
     <div>
-      {
-        // console.log(data)
-        data.map((item) => (
-          <div className="movie-card-div" key={item.id}>
-            <img id="movie-image" src={item.poster_path} />
-            <h3 id="movie-title">{item.title}</h3>
-          </div>
-        ))
-      }
+      <div className="movie-card-div" key={movieId}>
+        <img id="movie-image" src={movieImg} alt={movieTitle} />
+        <h3 id="movie-title">{movieTitle}</h3>
+      </div>
     </div>
   );
 }
