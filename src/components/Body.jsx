@@ -3,6 +3,7 @@ import "../styles/body.css";
 import MovieCard from "./MovieCard";
 import { useState, useEffect } from "react";
 import { API_LINK } from "../scripts/apiLinks";
+import { IMG_PATH } from "../scripts/apiLinks";
 
 const url = API_LINK;
 
@@ -38,7 +39,7 @@ function Body() {
       {data.map((item) => (
         <MovieCard key={item.id}
           movieId={item.id}
-          movieImg={item.poster_path}
+          movieImg={IMG_PATH + item.poster_path}
           movieTitle={item.title}
         />
       ))}

@@ -1,6 +1,9 @@
 .page-body{
     margin: 100px;
     display: grid;
+    align-items: stretch;
     grid-template-columns: repeat(5,1fr);
+    grid-template-rows: auto;
     row-gap: 50px;
+    column-gap: 20px;
 }
