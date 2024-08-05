@@ -7,3 +7,12 @@
     row-gap: 50px;
     column-gap: 20px;
 }
+
+.body-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.pages-div{
+    align-self: center;
+}

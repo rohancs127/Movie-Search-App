@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/body.css";
 import MovieCard from "./MovieCard";
+import Pages from "./Pages";
 import { useState, useEffect } from "react";
 import { API_LINK } from "../scripts/apiLinks";
 import { IMG_PATH } from "../scripts/apiLinks";
@@ -37,15 +38,20 @@ function Body({ getSearchedMovieAtBody }) {
     fetchData();
   }, [movie]);
   return (
-    <div className="page-body">
-      {data.map((item) => (
-        <MovieCard
-          key={item.id}
-          movieId={item.id}
-          movieImg={IMG_PATH + item.poster_path}
-          movieTitle={item.title}
-        />
-      ))}
+    <div className="body-div">
+      <div className="page-body">
+        {data.map((item) => (
+          <MovieCard
+            key={item.id}
+            movieId={item.id}
+            movieImg={IMG_PATH + item.poster_path}
+            movieTitle={item.title}
+          />
+        ))}
+      </div>
+      <div className="pages-div">
+        <Pages />
+      </div>
     </div>
   );
 }
