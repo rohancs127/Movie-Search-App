@@ -4,10 +4,10 @@ import MovieCard from "./MovieCard";
 import { useState, useEffect } from "react";
 import { API_LINK } from "../scripts/apiLinks";
 import { IMG_PATH } from "../scripts/apiLinks";
+import { SEARCH_API } from "../scripts/apiLinks";
 
-const url = API_LINK;
-
-function Body() {
+function Body({ getSearchedMovieAtBody }) {
+  const movie = getSearchedMovieAtBody;
   const [data, setData] = useState([]);
   useEffect(() => {
     // fetch(url)
@@ -23,6 +23,8 @@ function Body() {
 
     const fetchData = async () => {
       try {
+        console.log(movie, "at Body jsx");
+        const url = movie ? `${SEARCH_API + movie}` : API_LINK;
         const response = await fetch(url);
         if (!response.ok) throw new Error("Error in fetching data");
         const result = await response.json();
@@ -33,11 +35,12 @@ function Body() {
     };
 
     fetchData();
-  }, []);
+  }, [movie]);
   return (
     <div className="page-body">
       {data.map((item) => (
-        <MovieCard key={item.id}
+        <MovieCard
+          key={item.id}
           movieId={item.id}
           movieImg={IMG_PATH + item.poster_path}
           movieTitle={item.title}
