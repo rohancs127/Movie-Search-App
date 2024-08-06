@@ -8,10 +8,19 @@
 .page-div-element{
     background-color: #ff9a7b;
     color: #36162e;
-    font-size: 1.3rem;
-    width: 37px;
-    height: 37px;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 8px;
+    font-family:Arial, Helvetica, sans-serif;
+    border: 3px solid #ff6536;
+    box-shadow: 0px 0px 5px #36162e;
+    transition-duration: 0.2s;
+}
+
+.page-div-element:hover{
+    transform: scale(1.04);
 }
