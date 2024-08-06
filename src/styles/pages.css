@@ -1,3 +1,17 @@
 .page-div{
     display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.page-div-element{
+    background-color: #ff9a7b;
+    color: #36162e;
+    font-size: 1.3rem;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
