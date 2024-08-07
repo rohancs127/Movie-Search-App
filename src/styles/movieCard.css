@@ -21,6 +21,7 @@
   font-family: Rubik;
   color: #36162e;
   transition: 0.3s;
+  position: relative;
 }
 
 .movie-card-div:hover {
@@ -33,6 +34,19 @@
   border-radius: 10px;
 }
 
+#movie-image::before{
+  content: '';
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
 #movie-title {
   font-weight: 500;
+}
+
+#movie-description {
+  position: absolute;
+  top: 35%;
+  left: 44%;
 }
