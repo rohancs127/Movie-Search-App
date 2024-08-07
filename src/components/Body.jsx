@@ -10,6 +10,10 @@ import { SEARCH_API } from "../scripts/apiLinks";
 function Body({ getSearchedMovieAtBody }) {
   const movie = getSearchedMovieAtBody;
   const [data, setData] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const setPageNumber = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
   useEffect(() => {
     // fetch(url)
     //   .then((response) => {
@@ -25,7 +29,9 @@ function Body({ getSearchedMovieAtBody }) {
     const fetchData = async () => {
       try {
         console.log(movie, "at Body jsx");
-        const url = movie ? `${SEARCH_API + movie}` : API_LINK;
+        const url = movie
+          ? `${SEARCH_API + movie}`
+          : `${API_LINK + currentPage}`;
         const response = await fetch(url);
         if (!response.ok) throw new Error("Error in fetching data");
         const result = await response.json();
@@ -36,7 +42,7 @@ function Body({ getSearchedMovieAtBody }) {
     };
 
     fetchData();
-  }, [movie]);
+  }, [movie, currentPage]);
   return (
     <div className="body-div">
       <div className="page-body">
@@ -50,7 +56,7 @@ function Body({ getSearchedMovieAtBody }) {
         ))}
       </div>
       <div className="pages-div">
-        <Pages />
+        <Pages getPageNumber={setPageNumber} />
       </div>
     </div>
   );
