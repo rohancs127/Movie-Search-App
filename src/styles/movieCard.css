@@ -58,6 +58,16 @@
   left: 44%;
   opacity: 0;
 }
+
+.movie-info{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+}
+
+
 .movie-card-div:hover #movie-description{
   opacity: 1;
 }
