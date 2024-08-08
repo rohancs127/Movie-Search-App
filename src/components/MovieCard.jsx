@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/movieCard.css";
 import { Info } from "lucide-react";
 
-function MovieCard({ movieId, movieImg, movieTitle }) {
+function MovieCard({ movieId, movieImg, movieTitle, movieDescription, releaseDate, imdb }) {
   return (
     <div>
       <div className="movie-card-div" key={movieId}>

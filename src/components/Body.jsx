@@ -51,7 +51,10 @@ function Body({ getSearchedMovieAtBody }) {
             key={item.id}
             movieId={item.id}
             movieImg={IMG_PATH + item.poster_path}
-            movieTitle={item.title}
+            movieTitle={item.original_title}
+            movieDescription={item.overview}
+            releaseDate={item.release_date}
+            imdb={item.vote_average}
           />
         ))}
       </div>
