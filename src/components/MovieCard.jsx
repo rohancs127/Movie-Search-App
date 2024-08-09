@@ -21,16 +21,6 @@ function MovieCard({
       <div className="movie-card-div" key={movieId}>
         <img id="movie-image" src={movieImg} alt={movieTitle} />
         <h3 id="movie-title">{movieTitle}</h3>
-        {/* <div id="movie-description">
-          {!movieInfoToVisibleState && (
-            <Info
-              color="#fff"
-              size={"30px"}
-              strokeWidth={"3px"}
-              onClick={handleClick}
-            />
-          )}
-        </div> */}
 
         {/* <div className="movie-info">
           {movieInfoToVisibleState && (
