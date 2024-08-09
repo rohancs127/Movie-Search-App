@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/moveInfo.css"
+import "../styles/moveInfo.css";
 import { CircleX } from "lucide-react";
 
 function MovieInfo({ movieDescription, releaseDate, imdb }) {
@@ -7,11 +7,11 @@ function MovieInfo({ movieDescription, releaseDate, imdb }) {
     <div className="movie-info">
       <h3>Description</h3>
       <p className="description">{movieDescription}</p>
-      <h3>Release Date</h3>
-      <p className="release-date">{releaseDate}</p>
-      <h3>IMDB Rating</h3>
-      <p className="imdb">{imdb}</p>
-      <div className="close-btn"><CircleX /></div>
+      <p className="release-date">Release date: {releaseDate}</p>
+      <p className="imdb">IMDB rating: {imdb}</p>
+      <div className="close-btn">
+        <CircleX color="#36162e" size={"30px"} strokeWidth={"2px"} />
+      </div>
     </div>
   );
 }

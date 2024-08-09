@@ -21,24 +21,25 @@ function MovieCard({
       <div className="movie-card-div" key={movieId}>
         <img id="movie-image" src={movieImg} alt={movieTitle} />
         <h3 id="movie-title">{movieTitle}</h3>
-
-        {/* <div className="movie-info">
-          {movieInfoToVisibleState && (
+        <div className="info-btn">
+          {!movieInfoToVisibleState && (
+            <Info
+              color="#36162e"
+              size={"30px"}
+              strokeWidth={"2px"}
+              onClick={handleClick}
+            />
+          )}
+        </div>
+        {(movieInfoToVisibleState) && (
+          <div className="movie-info">
             <MovieInfo
               movieDescription={movieDescription}
               releaseDate={releaseDate}
               imdb={imdb}
             />
-          )}
-        </div> */}
-        <div className="info-btn">
-          <Info
-            color="#36162e"
-            size={"30px"}
-            strokeWidth={"2px"}
-            onClick={handleClick}
-          />
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );
