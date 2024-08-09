@@ -35,7 +35,7 @@
   border-radius: 10px;
 }
 
-.movie-card-div:hover::before{
+/* .movie-card-div:hover::before{
   content: '';
   background-color: rgba(0, 0, 0, 0.692);
   width: 100%;
@@ -45,7 +45,7 @@
   padding: 0;
   border-radius: 10px;
   opacity: 1;
-}
+} */
 
 #movie-title {
   font-weight: 500;
@@ -70,4 +70,14 @@
 
 .movie-card-div:hover #movie-description{
   opacity: 1;
+}
+
+.info-btn{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.612);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
