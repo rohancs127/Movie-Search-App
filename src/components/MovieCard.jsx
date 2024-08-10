@@ -13,9 +13,12 @@ function MovieCard({
   imdb,
 }) {
   const [movieInfoToVisibleState, setMovieInfoToVisibleState] = useState(false);
-  const handleClick = () => {
+  const handleInfoClick = () => {
     setMovieInfoToVisibleState(true);
   };
+  const handleCloseClick = ()=>{
+    setMovieInfoToVisibleState(false);
+  }
   return (
     <div>
       <div className="movie-card-div" key={movieId}>
@@ -27,7 +30,7 @@ function MovieCard({
               color="#36162e"
               size={"30px"}
               strokeWidth={"2px"}
-              onClick={handleClick}
+              onClick={handleInfoClick}
             />
           )}
         </div>
@@ -37,6 +40,7 @@ function MovieCard({
               movieDescription={movieDescription}
               releaseDate={releaseDate}
               imdb={imdb}
+              onClose={handleCloseClick}
             />
           </div>
         )}
