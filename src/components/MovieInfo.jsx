@@ -8,7 +8,7 @@ function MovieInfo({ movieDescription, releaseDate, imdb, onClose }) {
       <h3>Description</h3>
       <p className="description">{movieDescription}</p>
       <p className="release-date">Release date: {releaseDate}</p>
-      <p className="imdb">IMDB rating: {imdb}</p>
+      <p className="imdb">IMDB rating: {(imdb.toFixed(2))}</p>
       <div className="close-btn">
         <CircleX color="#36162e" size={"30px"} strokeWidth={"2px"} onClick={onClose}/>
       </div>
