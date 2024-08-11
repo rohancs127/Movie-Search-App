@@ -69,3 +69,10 @@
 .info-btn:hover{
   opacity: 1;
 }
+
+@media (max-width:640px) {
+  .info-btn{
+    opacity: 1;
+  }
+  
+}
