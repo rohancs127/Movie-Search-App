@@ -16,3 +16,11 @@
 .pages-div{
     align-self: center;
 }
+
+@media(max-width:640px){
+    .page-body{
+        grid-template-columns: 1fr;
+        margin: 75px;
+        margin-top: 100px;
+    }
+}
