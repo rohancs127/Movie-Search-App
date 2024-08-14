@@ -27,11 +27,11 @@ p {
 
 @keyframes slide-up {
   0% {
-    transform: translateY(10px);
+    /* transform: translateY(10px); */
     opacity: 0;
   }
   100% {
-    transform: translateY(-10px);
+    /* transform: translateY(-10px); */
     opacity: 1;
   }
 }
