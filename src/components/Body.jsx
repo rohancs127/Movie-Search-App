@@ -11,6 +11,7 @@ function Body({ getSearchedMovieAtBody }) {
   const movie = getSearchedMovieAtBody;
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [moviePresent, setMoviePresent] = useState(false);
   const setPageNumber = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
@@ -35,6 +36,7 @@ function Body({ getSearchedMovieAtBody }) {
         const response = await fetch(url);
         if (!response.ok) throw new Error("Error in fetching data");
         const result = await response.json();
+        setMoviePresent(true);
         setData(result.results);
       } catch (error) {
         console.error(error.message);
