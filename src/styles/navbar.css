@@ -79,6 +79,7 @@ body{
     font-size: 14px;
     width: 150px;
     text-align: left;
+    padding: 5px;
   }
   #search-input::placeholder{
     font-size: 14px;
